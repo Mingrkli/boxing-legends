@@ -71,6 +71,7 @@
 
 .legend-name h2 {
     font-size: 5rem;
+    margin-bottom: 1rem;
 }
 
 /* Legend Img */
@@ -116,4 +117,45 @@
     100% {
         opacity: 1;
     }
+}
+
+@media screen and (max-width: 1000px) {
+    .legend-name h1 {
+        font-size: 5rem;
+    }
+
+    .legend-name h2 {
+        font-size: 2rem;
+    }
+
+    .legend-text h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .legend-name h1 {
+        font-size: 3rem;
+    }
+
+    .legend-name h2 {
+        font-size: 1.5rem;
+    }
+
+    .legend-text h3 {
+        font-size: 1rem;
+    }
+
+    .legend-img-para {
+        flex-direction: column;
+    }
+
+    .legend-img-para img {
+        width: 300px;
+    }
+
+    .legend-container {
+        padding: 1rem;
+    }
+    
 }

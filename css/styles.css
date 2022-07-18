@@ -58,6 +58,18 @@ img, picture, svg {
     display: none;
 }
 
+@media screen and (max-width: 1650px) {
+    .wrapper {
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .wrapper {
+        max-width: 100%;
+    }
+}
+
 /* Choose Your Legend
 =================================================================================================*/
 #legend-choosing {
@@ -75,6 +87,7 @@ img, picture, svg {
     margin-bottom: 2rem;
 
     font-size: 5rem;
+    white-space: nowrap;
 }
 
 .legend-character-list {
@@ -84,7 +97,6 @@ img, picture, svg {
     gap: 1rem;
 
     margin-bottom: 1rem;
-
 }
 
 .legend-character {
@@ -115,6 +127,36 @@ img, picture, svg {
     border: 1px solid rgb(0, 250, 0);
 }
 
+@media screen and (max-width: 870px) {
+    .legend-character-list {
+        gap: .5rem;
+    }
+
+    .legend-character {
+        width: 150px;
+        height: 150px;
+    }
+
+    #legend-choosing h1 {    
+        font-size: 3rem;
+    }
+
+    .legend-character, .legend-character:hover {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .legend-character {
+        width: 100px;
+        height: 100px;
+    }
+
+    #legend-choosing h1 {    
+        font-size: 2rem;
+    }
+}
+
 /* Legend Show
 =================================================================================================*/
 #legend-show {
@@ -140,7 +182,6 @@ img, picture, svg {
 #legend-show img {
     height: 500px;
     width: 400px;
-
 }
 
 #legend-show h1, #legend-show p {
@@ -179,4 +220,37 @@ img, picture, svg {
 #legend-show a:hover {
     color: black;
     background-color: snow;
+}
+
+@media screen and (max-width: 870px) {
+    #legend-show {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    #legend-show div:first-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #legend-show img {
+        height: 400px;
+        width: 300px;
+    }
+
+    #legend-show h1 {
+        font-size: 2.5rem;
+    }
+
+    #legend-show p {
+        font-size: 1.5rem;
+    }
+
+    #legend-show a {
+        width: 80%;
+        padding: .5rem;
+    }
 }
