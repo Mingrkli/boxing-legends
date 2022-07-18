@@ -93,18 +93,19 @@
     width: 100%;
 }
 
-.legend-para {
+.legend-text img {
+    width: 500px;
+}
+
+/* Intersection Observer */
+.showable {
     opacity: 0;
 
     transition: 1s ease-in-out;
 }
 
-.legend-para.show.true {
+.showable.show.true {
     animation: legendTextShow 1s forwards;
-}
-
-.legend-text img {
-    width: 500px;
 }
 
 @keyframes legendTextShow {

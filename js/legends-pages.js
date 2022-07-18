@@ -1,5 +1,5 @@
 // Intersection Observer
-const legendPara = document.querySelectorAll('.legend-para')
+const scrollShow = document.querySelectorAll('.showable')
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -11,6 +11,6 @@ const observer = new IntersectionObserver(entries => {
     threshold: .5,
 })
 
-legendPara.forEach(para => {
+scrollShow.forEach(para => {
     observer.observe(para)
 })

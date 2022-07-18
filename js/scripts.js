@@ -33,7 +33,7 @@ function changeTextLegend(num) {
         // Hides link then shows link of the data doesn't have WIP in it's value
         legendShowLink.innerHTML = ''
         legendShowLink.classList.add('hidden')
-        if (legendsData[num].page != 'WIP') {
+        if (legendsData[num].page != 'Sample') {
             legendShowLink.classList.remove('hidden')
             legendShowLink.href = legendsData[num].page
             legendShowLink.innerHTML = 'Learn More'
