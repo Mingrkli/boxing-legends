@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+ul[role=list],
+ol[role=list] {
+    list-style: none;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    position: relative;
+
+    color: snow;
+    text-rendering: optimizeSpeed;
+    background-color: black;
+}
+
+img, picture, svg {
+    max-width: 100%;
+    display: block;
+}
+
+.img-float-left {
+    float: left;
+    margin-right: 1rem;
+}
+
+.img-float-right {
+    float: right;
+    margin-left: 1rem;
+}
+
+.suffix {
+    font-size: .7rem;
+    vertical-align: text-top;
+}
+
+.wrapper {
+    max-width: 60%;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Choose Your Legend
+=================================================================================================*/
+#legend-choosing {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 50%;
+    height: 500px;
+
+    transform: translateX(-50%);
+}
+
+#legend-choosing h1 {
+    margin-bottom: 2rem;
+
+    font-size: 5rem;
+}
+
+.legend-character-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    margin-bottom: 1rem;
+
+}
+
+.legend-character {
+    width: 200px;
+    height: 200px;
+
+    background-color: snow;
+    border: 1px solid snow;
+
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+
+    object-fit: fill;
+
+    transition: 200ms ease-in-out;
+}
+
+.legend-character:active {
+    filter: brightness(.1);
+}
+
+.legend-character:hover {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    border: 1px solid rgb(255, 200, 0);
+}
+
+.legend-character.selected {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    border: 1px solid rgb(0, 250, 0);
+}
+
+/* Legend Show
+=================================================================================================*/
+#legend-show {
+    display: flex;
+    justify-content: center;
+
+    padding-top: 500px;
+}
+
+#legend-show div {
+    height: 500px;
+    width: 400px;
+}
+
+#legend-show div:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-left: 1rem;
+}
+
+#legend-show img {
+    height: 500px;
+    width: 400px;
+
+}
+
+#legend-show h1, #legend-show p {
+    margin-bottom: 1rem;
+
+}
+
+#legend-show h1 {
+    font-size: 3rem;
+}
+
+#legend-show p {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#legend-show a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+
+    font-size: 2rem;
+    color: snow;
+    text-decoration: none;
+    border: 1px solid snow;
+
+    transition: 200ms ease-in-out;
+}
+
+#legend-show a.hidden {
+    display: none;
+}
+
+#legend-show a:hover {
+    color: black;
+    background-color: snow;
+}

@@ -1,0 +1,118 @@
+/* Nav Bar
+=================================================================================================*/
+#nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+#nav-bar a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    font-size: 1.5rem;
+    color: black;
+    background-color: snow;
+    text-decoration: none;
+
+    transition: 200ms ease-in-out;
+}
+
+#nav-bar a:hover {
+    color: snow;
+    background-color: black;
+}
+
+/* Boxing Legends
+=================================================================================================*/
+#boxing-legends {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: snow;
+    background: url('https://cdn.wallpapersafari.com/55/67/DCcjon.jpg') no-repeat center;
+    background-size: cover;
+}
+
+#boxing-legends h3, #boxing-legends p {
+    margin-bottom: 1rem;
+}
+
+#boxing-legends p {
+    font-size: 1.5rem;
+}
+
+.legend-container {
+    padding: 0 2rem;
+
+    background-color: rgba(0,0,0,.8);
+}
+
+.legend-name, .legend-img-para {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Legend Name or intro */
+.legend-name {
+    flex-direction: column;
+}
+
+.legend-name h1 {
+    font-size: 8rem;
+}
+
+.legend-name h2 {
+    font-size: 5rem;
+}
+
+/* Legend Img */
+.legend-img-para, .legend-para {
+    margin-bottom: 2rem;
+}
+
+/* Legend Text */
+.legend-text {
+    padding: 0 2rem;
+}
+
+.legend-text h3 {
+    font-size: 3rem;
+    border-bottom: 1px solid snow;
+}
+
+/* Legend Para Only */
+.legend-para .legend-text {
+    width: 100%;
+}
+
+.legend-para {
+    opacity: 0;
+
+    transition: 1s ease-in-out;
+}
+
+.legend-para.show.true {
+    animation: legendTextShow 1s forwards;
+}
+
+.legend-text img {
+    width: 500px;
+}
+
+@keyframes legendTextShow {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
